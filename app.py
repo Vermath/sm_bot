@@ -117,4 +117,5 @@ if submit_button and user_input.strip() != '':
             stream.until_done()
 
     # Clear the input field
-    st.experimental_rerun()
+    st.session_state['user_input'] = ''
+
