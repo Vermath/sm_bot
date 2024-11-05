@@ -81,6 +81,7 @@ if submit_button and user_input.strip() != '':
     # Define an EventHandler class
     class StreamlitEventHandler(AssistantEventHandler):
         def __init__(self, message_placeholder):
+            super().__init__()  # Added this line to fix the error
             self.message_placeholder = message_placeholder
             self.message = ""
 
