@@ -81,7 +81,7 @@ if submit_button and user_input.strip() != '':
     # Define an EventHandler class
     class StreamlitEventHandler(AssistantEventHandler):
         def __init__(self, message_placeholder):
-            super().__init__()  # Added this line to fix the error
+            super().__init__()
             self.message_placeholder = message_placeholder
             self.message = ""
 
@@ -117,5 +117,4 @@ if submit_button and user_input.strip() != '':
             stream.until_done()
 
     # Clear the input field
-    st.session_state['user_input'] = ''
-
+    st.rerun()
